@@ -3,6 +3,8 @@
 ## Description
 This is a lightbulb placement puzzle game implemented in JavaScript. The objective of the game is to illuminate all the white tiles by strategically placing light bulbs on the board.
 
+![lightbalb_game](images/lightbalb.gif)
+
 ## How to Play
 - Click on a white tile to place a light bulb.
 - Light beams travel only in straight lines along the row and column from the light bulb.
