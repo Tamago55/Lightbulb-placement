@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light_bulb_placement</title>
+    <style>
+        /* body, h1, h2, h3, p, table {
+            text-align: center;
+        } */
+
+        td{
+            width: 50px;
+            height: 50px;
+        }
+        table, tr, td{
+            margin: auto;
+            border-collapse: collapse;
+            border: 2px solid gray;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white; 
+            text-align:  center;   
+        }
+        .colour-0{
+            background-color: white;
+        }
+        .colour-1{
+            background-color: rgb(235, 239, 169);
+        }
+        .colour-2{
+            background-color: black;
+        }
+        .colour-3{
+            background-color: rgb(242, 176, 176);
+        }
+        body {
+            background-color: #f3f0eb;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #4a2c2a;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        h3 {
+            text-align: left;
+            color: #4a2c2a;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        input[type="button"] {
+            background-color: #4a2c2a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        input[type="text"] {
+            border: 2px solid #4a2c2a;
+            padding: 5px;
+        }
+
+        .frame {
+            padding: 5px; 
+            width: 30%; 
+            margin: 20px auto; 
+            text-align: left; 
+        }
+
+        .frame2 {
+            padding: 5px; 
+            width: 25%; 
+            margin: 20px auto; 
+            text-align: center; 
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+        <h1>Light bulb placement<h1>
+        <h2>How to play</h2>
+            <div class="frame">
+                <li>Put the light bulbs by click above white tiles</li>
+                <li>The light from the bulbs does only straight along the given row and column.</li>
+                <li>The black tiles have objects placed on them, which block the propagation of light.</li>
+                <li>Black cells can optionally contain an integer from 0 to 4. This indicates how many adjacent (bottom, top, right, left) cells contain light bulbs.</li>
+                <li>If there is such a number on the black tiles, the puzzle must be solved accordingly!</li>
+                <li>light bulbs can NEVER illuminate each other!</li>
+                <li>The goal of the game is to place the light bulbs so that all the white tiles are illuminated.</li> 
+            </div>
+        <h2>Step</h2>
+        <div class="frame2">
+            <h3>1. Please enter your name in the space below</h3>
+                <p><label><input type="text" id="nameText"></label></p>
+            <h3>2. Choose the matrix which you will play below</h3>
+                <p>
+                    <input type="button" value="7x7_easy" id="easy7" onclick="easy7x7()">
+                    <input type="button" value="7x7_hard" id="hard7" onclick="hard7x7()">
+                    <input type="button" value="10x10_normal" id="normal10" onclick="normal10x10()">
+                </p>
+            <h3>3. When you solve it, enter the botton below to check</h3>
+            <p id="check"><input type="button" value="Check" id="check" onclick="checkMatrix();"></p>
+
+            <p id="scoreboard">Scoreboard</p>
+            <p id="name"></p>
+            <p id="map"></p>
+            <p id="PassageArea"></p>
+        </div>
+
+    <table></table>
+        
+
+</body>
+</html>
+<script src="script.js"></script>
